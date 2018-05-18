@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col } from 'react-flexbox-grid';
 import RaisedButton from 'material-ui/RaisedButton';
 import IconAlertError from 'material-ui/svg-icons/alert/error';
 
 const IssueCredentialsError = ({ onRetry }) => (
   <div id="issue-error">
-    <Row center="xs">
-      <Col xs>
+    <div>
+      <div style={{ textAlign: 'center' }}>
         <IconAlertError style={{ width: '100px', height: '100px', color: 'orangered' }} />
-      </Col>
-    </Row>
-    <Row center="xs">
-      <Col xs={6}>
+      </div>
+    </div>
+    <div>
+      <div style={{ textAlign: 'center' }}>
         Er is iets misgegaan!<br />
         <br />
         <RaisedButton
@@ -20,8 +19,8 @@ const IssueCredentialsError = ({ onRetry }) => (
           primary
           onClick={onRetry}
         />
-      </Col>
-    </Row>
+      </div>
+    </div>
   </div>
 );
 

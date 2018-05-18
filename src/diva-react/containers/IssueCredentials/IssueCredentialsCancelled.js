@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col } from 'react-flexbox-grid';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const IssueCredentialsCancelled = ({ onRetry }) => (
   <div style={{ padding: '20px' }} id="issue-cancelled">
-    <Row center="xs">
-      <Col xs={6}>
+    <div>
+      <div style={{ textAlign: 'center' }}>
         Je hebt het uitgeven van credentials geannuleerd.<br />
         <br />
         <RaisedButton
@@ -15,8 +14,8 @@ const IssueCredentialsCancelled = ({ onRetry }) => (
           onClick={onRetry}
         />
         <br />
-      </Col>
-    </Row>
+      </div>
+    </div>
   </div>
 );
 
