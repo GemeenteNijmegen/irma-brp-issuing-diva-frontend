@@ -5,8 +5,9 @@ import QRCode from 'qrcode.react';
 const IssueCredentialsInitialized = ({ credentialType, qrContent }) => (
   <div style={{ padding: '20px' }}>
     <div>
-      <div style={{ textAlign: 'center', display: 'none' }}>
-        Credential(s) type: {credentialType}<br />
+      <div style={{ textAlign: 'center' }}>
+        <b>Scan de QR code</b>
+        <span style={{ display: 'none' }}>Credential(s) type: {credentialType}</span><br />
         <br />
       </div>
     </div>

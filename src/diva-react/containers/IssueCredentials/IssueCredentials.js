@@ -7,7 +7,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 
 import { actions } from '../../reducers/diva-reducer';
 
-import IssueCredentialsToolbar from './IssueCredentialsToolbar';
+// import IssueCredentialsToolbar from './IssueCredentialsToolbar';
 import IssueCredentialsInitialized from './IssueCredentialsInitialized';
 import IssueCredentialsConnected from './IssueCredentialsConnected';
 import IssueCredentialsCancelled from './IssueCredentialsCancelled';
@@ -40,7 +40,7 @@ class IssueCredentials extends Component {
 
     return (
       <div>
-        <IssueCredentialsToolbar />
+        {/* <IssueCredentialsToolbar /> */}
 
         {divaSession && divaSession.sessionStatus !== 'STARTING' ? (
           <div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RaisedButton from 'material-ui/RaisedButton';
 
 const IssueCredentialsCancelled = ({ onRetry }) => (
   <div style={{ padding: '20px' }} id="issue-cancelled">
@@ -8,11 +7,9 @@ const IssueCredentialsCancelled = ({ onRetry }) => (
       <div style={{ textAlign: 'center' }}>
         Je hebt het uitgeven van credentials geannuleerd.<br />
         <br />
-        <RaisedButton
-          label="Retry"
-          primary
-          onClick={onRetry}
-        />
+        <button type="button" className="btn btn-primary" onClick={onRetry}>
+          Opnieuw proberen
+        </button><br />
         <br />
       </div>
     </div>

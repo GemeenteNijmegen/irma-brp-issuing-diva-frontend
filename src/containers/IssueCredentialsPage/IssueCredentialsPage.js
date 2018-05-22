@@ -6,6 +6,9 @@ import IssueCredentials from '../../diva-react/containers/IssueCredentials/Issue
 const IssueCredentialsPage = () => (
   <div className="container">
     <div className="row">
+      <div className="col-12" style={{ textAlign: 'center' }}>
+        <h2>Uitgifte van BRP-attributen</h2>
+      </div>
       <div className="col-xs-12 col-lg-8 col-centered">
         <IssueCredentials
           viewId="issue-brp1"
