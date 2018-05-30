@@ -3,7 +3,7 @@ import axios from 'axios';
 function startIrmaSession(irmaSessionType, options) {
   // TODO: send options and parse in backend based on type?
   return axios
-    .post('/api/start-irma-session', {
+    .post(`${window.env.baseUrl}/api/start-irma-session`, {
       type: irmaSessionType,
       content: options.attributesRequired,
       credentialType: options.credentialType,
@@ -22,14 +22,14 @@ function poll(irmaSessionType, irmaSessionId) {
   switch (irmaSessionType) {
     case 'ISSUE':
       return axios
-        .get(`/api/issue-status?irmaSessionId=${irmaSessionId}`, {
+        .get(`${window.env.baseUrl}/api/issue-status?irmaSessionId=${irmaSessionId}`, {
           withCredentials: true,
         })
         .then(response => response.data);
 
     case 'DISCLOSE':
       return axios
-        .get(`/api/disclosure-status?irmaSessionId=${irmaSessionId}`, {
+        .get(`${window.env.baseUrl}/api/disclosure-status?irmaSessionId=${irmaSessionId}`, {
           withCredentials: true,
         })
         .then(response => response.data);
